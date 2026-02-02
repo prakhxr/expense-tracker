@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app">
+        <h1>Expense Tracker</h1>
+
+        <section class="expense-form">
+            <input type="text" id="expense-name" placeholder="Expense name">
+            <input type="number" id="expense-amount" placeholder="Amount in ₹">
+            <select id="expense-category">
+                <option value="">Select category</option>
+                <option value="food">Food</option>
+                <option value="travel">Travel</option>
+                <option value="shopping">Shopping</option>
+                <option value="rent">Rent</option>
+                <option value="other">Other</option>
+            </select>
+            <button id="add-expense-btn">Add Expense</button>
+        </section>
+
+
+        <section class="category-filters">
+            <button data-category="all" class="active">All</button>
+            <button data-category="food">Food</button>
+            <button data-category="travel">Travel</button>
+            <button data-category="shopping">Shopping</button>
+            <button data-category="rent">Rent</button>
+            <button data-category="other">Other</button>
+        </section>
+
+
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Search Expenses...">
+        </section>
+
+        <section class="expense-list">
+            <h2>Expenses</h2>
+            <ul id="expense-items"></ul>
+        </section>
+
+        <section class="expense-total">
+            <div id="categoryTotal"></div>
+            <h2>Total: ₹<span id="total-amount">0</span></h2>
+        </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
